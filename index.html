@@ -52,25 +52,6 @@
 
           <div class="column has-text-centered">
             <div class="publication-links">
-              <!-- PDF Link. -->
-<!--               <span class="link-block">
-                <a href=""
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span> -->
-              <!-- <span class="link-block">
-                <a href=""
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span> -->
               <!-- Code Link. -->
               <span class="link-block">
                 <a href=""
@@ -110,103 +91,25 @@
         <div class="content has-text-justified">
           <p>
             Identifying fonts in artwork is a critical step in graphic design, which is fundamental to copyright protection and artistic creation. 
-            However, existing Visual Font Recognition (VFR) models rely on classification approaches, which are unsuitable for open-set fonts as font categories grow.
-            Furthermore, these models are trained on monochrome document images, leading to a significant domain gap with real-world data.
+             However, existing Visual Font Recognition (VFR) models rely on classification approaches, 
+             which are unsuitable for open-set fonts as font categories grow. Besides, these models are trained on monochrome text images, 
+             leading to a significant domain gap with real-world data. 
           </p>
             
           <p>
-            In this work, we propose FontMLLM, a novel architecture that employs learnable queries to leverage the text recognition and image understanding capabilities of Multimodal Large Language Models for VFR. 
-            Firstly, we introduce a training-free similarity-driven approach and an augmented synthetic image pipeline to effectively and efficiently handle open-set fonts. 
-            Secondly, to bridge the domain gap between training data and real-world data, 
-            FontMLLM provides a refined segmentation prompt that enables the Segment Anything Model to generate precise mask images,  
-            minimizing interference from outlines, colors, and backgrounds. 
-            With these designs, FontMLLM enables end-to-end multitask processing, showcasing its potential as a unified model for text-related tasks. 
-            Moreover, we present the first large-scale multilingual VFR dataset, named DesignVFR. 
-            Our method achieves state-of-the-art performance on real-world graphic design datasets and demonstrates robust open-set VFR capabilities.
+            To address these challenges, we propose FontMLLM,
+              a novel architecture that employs learnable queries to leverage the text recognition and image understanding capabilities of Multimodal Large Language Models for VFR. Firstly,
+               we introduce a training-free similarity-based approach via an augmented synthetic image to effectively identify open-set fonts.
+                Secondly, to bridge the domain gap between training data and real-world data, FontMLLM provides a refined segmentation prompt that enables the Segment Anything Model to generate precise mask images, 
+                 minimizing interference from outlines, colors, and backgrounds. With these designs, FontMLLM enables end-to-end multitask processing,
+                  showcasing its potential as a unified model for text-related tasks. Moreover, we present the first large-scale multilingual VFR dataset,
+                   named DesignVFR. On the Poster_real and Video_real subsets, our method achieves 95.62\% and 87.04\% Top-5 accuracy for close-set VFR,
+                    and 92.74\% and 85.95\% for open-set VFR. 
           </p>
 
         </div>
       </div>
     </div>
-    <!--/ Abstract. -->
-
-    <!-- Motivation -->
-    <!-- <div class="columns is-centered has-text-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Motivation</h2>
-        <div class="content has-text-justified">
-           <img src="./static/images/intro-1.jpg" alt="Motivation">
-          <p>
-            Existing scene text segmentation methods ignore the significance of text edges in practical applications.
-            For instance, accurate text masks, especially in text-edge areas, can provide more background information 
-            to inpaint text areas in the text erasing task. 
-          </p>
-          <p>
-            In experiments, we observe that traditional edge detection algorithms, such as Canny, can well distinguish text edges. 
-            To fully exploit the merits of traditional edge detection methods to improve the segmentation performance at text edges, 
-            in this paper, we propose Edge-Aware Transformers (EAFormer) for scene text segmentation.
-
-        </div>
-      </div>
-    </div> -->
-
-    <!-- Architecture -->
-    <!-- <div class="columns is-centered has-text-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Architecture</h2>
-        <div class="content has-text-justified">
-          <img src="./static/images/overview.jpg" alt="Architecture">
-          <p>
-            The proposed EAFormer consists of three modules: text edge extractor, edge-guided encoder, and text segmentation decoder.
-            Given the input scene text image, the text edge extractor is used to obtain the edges of text areas. Then, the text image
-            and detected text edges are input into the edge-guided encoder to extract edge-aware features. Finally, the text segmentation
-            decoder takes the features generated by the encoder as input to produce the corresponding text mask.
-
-        </div>
-      </div>
-    </div> -->
-
-    <!-- Qualitative and quantitative analysis -->
-    <!-- <div class="columns is-centered has-text-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Qualitative and Quantitative Analysis</h2>
-        <div class="content has-text-justified">
-          <img src="./static/images/res.jpg" alt="Qualitative and quantitative analysis">
-          <p>
-            EAFormer can perform better than previous methods at text edges, which benefits from the introduced edge information. 
-            In addition, for COCO_TS and MLT_S, we compare the segmentation results based on both the original and modified annotations.
-
-        </div>
-      </div>
-    </div> -->
-
-    <!-- Dataset Reannotation -->
-    <!-- <div class="columns is-centered has-text-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Dataset Reannotation</h2>
-        <div class="content has-text-justified">
-          <img src="./static/images/reanno.jpg" alt="Dataset Reannotation">
-          <p>
-            The original annotations of COCO_TS and MLT_S are too coarse to train a text segmentation model with satisfactory performance. 
-            Even if the proposed method achieves better performance on these datasets, it is not sufficient to demonstrate the effectiveness
-            of our method. To make the experimental results more convincing, we have re-annotated all samples of these two datasets and used 
-            the newly annotated datasets to conduct experiments.
-
-        </div>
-      </div>
-    </div> -->
-
-    <!-- Paper video. -->
-<!--     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div> -->
-    <!--/ Paper video. -->
   </div>
 </section>
 
