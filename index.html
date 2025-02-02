@@ -47,7 +47,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">FontMLLM: A Multimodal Large Language Model for Open-Set Font Recognition With Synthetic Image Similarities Matching</h1>
+          <h1 class="title is-1 publication-title">FontMLLM: A Multimodal LLM for Open-Set Font Recognition via Augmented Synthetic Similarity</h1>
           
 
           <div class="column has-text-centered">
@@ -90,21 +90,24 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Identifying fonts in artwork is a critical step in graphic design, which is fundamental to copyright protection and artistic creation. 
-             However, existing Visual Font Recognition (VFR) models rely on classification approaches, 
-             which are unsuitable for open-set fonts as font categories grow. Besides, these models are trained on monochrome text images, 
-             leading to a significant domain gap with real-world data. 
+            Identifying fonts in artwork is a critical step in graphic design, which is fundamental to copyright protection
+             and artistic creation.  However, existing Visual Font Recognition (VFR) models rely on classification
+              approaches, which are unsuitable for open-set fonts as font categories grow. 
+              Besides, these models are trained on monochrome text images, leading to a significant
+               domain gap with real-world data.
           </p>
             
           <p>
-            To address these challenges, we propose FontMLLM,
-              a novel architecture that employs learnable queries to leverage the text recognition and image understanding capabilities of Multimodal Large Language Models for VFR. Firstly,
-               we introduce a training-free similarity-based approach via an augmented synthetic image to effectively identify open-set fonts.
-                Secondly, to bridge the domain gap between training data and real-world data, FontMLLM provides a refined segmentation prompt that enables the Segment Anything Model to generate precise mask images, 
-                 minimizing interference from outlines, colors, and backgrounds. With these designs, FontMLLM enables end-to-end multitask processing,
-                  showcasing its potential as a unified model for text-related tasks. Moreover, we present the first large-scale multilingual VFR dataset,
-                   named DesignVFR. On the Poster_real and Video_real subsets, our method achieves 95.62\% and 87.04\% Top-5 accuracy for close-set VFR,
-                    and 92.74\% and 85.95\% for open-set VFR. 
+            To address these challenges, we propose FontMLLM, a novel architecture that employs learnable queries to
+             leverage the text recognition and image understanding capabilities of Multimodal Large Language Models for VFR.
+              Moreover, we introduce a training-free similarity-based approach via an augmented synthetic image to effectively
+               identify open-set fonts. Furthermore, to bridge the domain gap between training data and real-world data,
+                FontMLLM provides a refined segmentation prompt that enables the Segment Anything Model to generate precise
+                 mask images,  minimizing interference from outlines, colors, and backgrounds. These designs enable FontMLLM
+                  to perform end-to-end segmentation-based VFR, highlighting its potential as a unified model for text-related
+                   tasks. Moreover, we present the first large-scale multilingual VFR dataset, named DesignVFR. Our method
+                    achieves Top-5 accuracy of 95.62\% on $\text{Poster}_{real}$ and 87.04\% on $\text{Video}_{real}$ for
+                     close-set VFR, while reaching 92.74\% and 85.95\% for open-set VFR, respectively. 
           </p>
 
         </div>
